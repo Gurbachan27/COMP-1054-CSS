@@ -1,0 +1,176 @@
+:root {
+    --max-font-size: 24px;
+    --min-font-size: 16px;
+}
+
+body {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.700)), url('../images/bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+
+.title {
+    padding: 50px;
+    text-align: center; /* Center align the title */
+    font-size: 36px; /* Adjust title font size */
+    color: lightblue; /* Set title color */
+    margin-top: 20px; /* Add some margin at the top */
+}
+.sub-title {
+    
+    text-align: center; /* Center align the title */
+    font-size: 30px; /* Adjust title font size */
+    color: lightblue; /* Set title color */
+    margin-top: 10px; /* Add some margin at the top */
+}
+.verse {
+    padding:1%;
+    margin-bottom: 30px; /* Add margin between verses */
+}
+
+.odd {
+    font-family: 'Helvetica', sans-serif; /* Set font for odd numbered verses */
+    margin-bottom:-8px;
+}
+.even {
+    font-family: 'Montserrat', sans-serif; /* Set font for even numbered verses */
+    margin-bottom:-8px;
+}
+
+.verse p:nth-child(odd) {
+    font-size: 16px; /* Apply font size to odd paragraphs */
+}
+
+.verse p:nth-child(even) {
+    font-size: 20px; 
+}
+
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    height: 100vh; /* Make main take up the full viewport height */
+    
+}
+
+.lyrics {
+    text-align: center;
+    border:1px solid gray;
+    flex: 1; /* Each section takes up equal space */
+    margin-left: 10%; /* Add some padding for spacing */
+    overflow-y: scroll; /* Enable vertical scrolling for lyrics */
+    margin-right:5%;
+    border-radius:10px; 
+    margin-bottom:15%;
+    padding:0% 2%;
+}
+
+.video-section {
+    flex: 1;
+    position: sticky; /* Make the video section sticky */
+    top: 0; /* Stick the video section to the top */
+    padding-right: 50px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #007bff; /* Blue color for section headings */
+}
+
+
+
+.video {
+    width: 100%; /* Make the video take up the full width of its container */
+    height: 400px; /* Set a fixed height for the video */
+    
+    text-align: center; /* Center align the video */
+    margin-bottom: 10px;
+}
+.audio audio{
+    width:100%;
+    padding-top:2%;
+}
+
+.video iframe {
+    border-radius: 10px;
+}
+.lyrics::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* Move snowflakes above other content */
+}
+
+.snowflake {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color:rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 254, 254, 0.5);
+    animation: snow-fall linear infinite;
+}
+@keyframes snow-fall {
+    0% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Adjust the animation duration and delay for each snowflake */
+.snowflake:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    left: 10%;
+    animation-duration: 10s; /* Adjust the animation duration */
+    animation-delay: 0s; /* Adjust the delay */
+}
+
+.snowflake:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    left: 20%;
+    animation-duration: 12s; /* Adjust the animation duration */
+    animation-delay: 1s; /* Adjust the delay */
+}
+
+.snowflake:nth-child(3) {
+    right:10%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 12s; /* Adjust the animation duration */
+    animation-delay: 3s; /* Adjust the delay */
+}
+
+.snowflake:nth-child(4) {
+    right: 50%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 12s; /* Adjust the animation duration */
+    animation-delay: 4s; /* Adjust the delay */
+}
